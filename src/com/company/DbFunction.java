@@ -2,6 +2,8 @@ package com.company;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.Statement;
+
 
 public class DbFunction {
 //    function to connect to the database
@@ -21,5 +23,20 @@ public class DbFunction {
         }
         // return the connection objection
         return conn;
+    }
+
+    //function to create table and insert data
+    public void createTable(Connection conn, String table_name){
+        Statement statement;
+        try {
+            //in postges SERIAL is an auto increment Int field
+            String query = "create table " + table_name + "(empid SERIAL, name varchar(200), address varchar(200), primary key(empid))";
+            statement = conn.createStatement();
+            statement.executeUpdate(query);
+            System.out.println("Table Created");
+
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 }
