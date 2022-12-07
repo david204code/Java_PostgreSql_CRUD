@@ -123,4 +123,19 @@ public class DbFunction {
             System.out.println(e);
         }
     }
+
+    public void delete_row_by_name(Connection conn, String table_name, String name) {
+        Statement statement;
+
+        try {
+            String query = String.format("delete from %s where name = '%s'", table_name, name);
+            //initiate the statement
+            statement = conn.createStatement();
+            //execute the query
+            statement.executeUpdate(query);
+            System.out.println("Data Deleted");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
 }
