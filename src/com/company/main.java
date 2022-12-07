@@ -7,6 +7,7 @@ public class main {
         DbFunction db = new DbFunction();
         Connection conn = db.connect_to_db("tutdb", "postgres", "password");
 //        db.createTable(conn, "employee");
-        db.insert_row(conn, "employee", "Jose", "England");
+//        db.insert_row(conn, "employee", "Jose", "England");
+        db.read_data(conn, "employee");
     }
 }
