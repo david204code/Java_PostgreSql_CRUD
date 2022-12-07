@@ -71,4 +71,18 @@ public class DbFunction {
             System.out.println(e);
         }
     }
+
+    public void update_name(Connection conn, String table_name, String old_name, String new_name) {
+        Statement statement;
+
+        try{
+            String query = String.format("update %s set name = '%s' where name = '%s'", table_name, new_name, old_name);
+            //initiate the statement
+            statement = conn.createStatement();
+            statement.executeUpdate(query);
+            System.out.println("Data Updated");
+        } catch (Exception e){
+            System.out.println(e);
+        }
+    }
 }
