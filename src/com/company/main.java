@@ -11,8 +11,9 @@ public class main {
 //        db.update_name(conn, "employee", "Jose", "Matthew");
 //        db.search_by_name(conn, "employee",  "Matthew");
 //        db.delete_row_by_name(conn, "employee", "Judas");
-        db.delete_row_by_id(conn, "employee", 5);
-        db.read_data(conn, "employee");
+//        db.delete_row_by_id(conn, "employee", 5);
+//        db.read_data(conn, "employee");
 //        db.search_by_id(conn, "employee", 4);
+        db.delete_table(conn, "employee");
     }
 }
