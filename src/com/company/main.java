@@ -14,6 +14,6 @@ public class main {
 //        db.delete_row_by_id(conn, "employee", 5);
 //        db.read_data(conn, "employee");
 //        db.search_by_id(conn, "employee", 4);
-        db.delete_table(conn, "employee");
+//        db.delete_table(conn, "employee");
     }
 }
